@@ -2,3 +2,4 @@
 out
 CMakeSettings.json
 clear-install.cmake
+download
