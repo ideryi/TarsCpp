@@ -40,7 +40,11 @@ option(ONLY_LIB "option for only lib" ON)
 #-------------------------------------------------------------
 
 IF (UNIX)
-    set(CMAKE_INSTALL_PREFIX "/home/alex/tars/cpp" CACHE STRING "set install path" FORCE)
+    if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+        message("-----------------------------------------------")
+        message("tars project not defined CMAKE_INSTALL_PREFIX,use /home/tars/cpp")
+        set(CMAKE_INSTALL_PREFIX "/home/tars/cpp" CACHE STRING "set install path" FORCE)
+    endif()
 ELSE()
     set(CMAKE_INSTALL_PREFIX "c:\\tars\\cpp" CACHE STRING "set install path" FORCE)
 ENDIF()

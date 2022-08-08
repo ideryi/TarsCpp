@@ -688,6 +688,8 @@ bool Application::addAppConfig(const string &filename)
     return true;
 }
 
+#include <thread>
+#include <chrono>
 void Application::main(int argc, char *argv[])
 {
     TC_Option op;
