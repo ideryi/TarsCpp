@@ -21,13 +21,20 @@
       "ctestCommandArgs": "",
       "inheritEnvironments": [ "linux_x64" ],
       "remoteMachineName": "${defaultRemoteMachineName}",
-      "remoteCMakeListsRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/src",
-      "remoteBuildRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/out/build/${name}",
+      "remoteCMakeListsRoot": "/home/alex/.vs/${projectDirName}/${workspaceHash}/src",
+      "remoteBuildRoot": "/home/alex/.vs/${projectDirName}/${workspaceHash}/out/build/${name}",
       "remoteCopySources": true,
       "rsyncCommandArgs": "-t --delete --delete-excluded",
       "remoteCopyBuildOutput": false,
       "remoteCopySourcesMethod": "rsync",
-      "remoteInstallRoot": "/home/tars/cpp"
+      "remoteInstallRoot": "/home/tars/cpp",
+      "variables": [
+        {
+          "name": "CMAKE_INSTALL_PREFIX",
+          "value": "/home/alex/tars/cpp",
+          "type": "PATH"
+        }
+      ]
     }
   ]
 }
